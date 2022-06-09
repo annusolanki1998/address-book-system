@@ -1,17 +1,6 @@
 package com.bridgelabz;
 
 public class Contact {
-    public Contact(String firstName, String lastName, String address, String city, String state, String zip, String phoneNumber, String email){
-        this.firstName=firstName;
-        this.lastName=lastName;
-        this.address=address;
-        this.city=city;
-        this.state=state;
-        this.zip=zip;
-        this.phoneNumber=phoneNumber;
-        this.email=email;
-
-    }
     public String firstName;
     public String lastName;
     public String address;
@@ -21,9 +10,18 @@ public class Contact {
     public String phoneNumber;
     public String email;
 
-    public Contact() {
+    public Contact(String firstName, String lastName, String address, String city, String state, int zip, long phoneNumber, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.zip = String.valueOf(zip);
+        this.phoneNumber = String.valueOf(phoneNumber);
+        this.email = email;
 
     }
+
 
     public String getFirstName() {
         return firstName;
@@ -77,7 +75,7 @@ public class Contact {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = String.valueOf(phoneNumber);
     }
 
@@ -89,8 +87,27 @@ public class Contact {
         this.email = email;
     }
 
-
-
+    public Contact() {
 
     }
+
+    public Contact(String firstName2, String lastName2, String address2, String city2, String state2, String zip2, String phoneNumber2, String email2) {
+        this.firstName = firstName2;
+        this.lastName = lastName2;
+        this.address = address2;
+        this.city = city2;
+        this.state = state2;
+        this.zip = String.valueOf(zip2);
+        this.phoneNumber = String.valueOf(phoneNumber2);
+        this.email = email2;
+
+    }
+
+    public String toString() {
+        return "Contact [firstName=" + firstName + ", lastName=" + lastName + ",  address=" + address + ", city=" + city + ", state=" + state + ", zip="
+                + zip + ", phoneNumber=" + phoneNumber + ", email=" + email + "]";
+
+    }
+
+}
 
