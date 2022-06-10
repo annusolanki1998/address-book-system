@@ -6,21 +6,25 @@ public class Contact {
     public String address;
     public String city;
     public String state;
-    public String zip;
-    public String phoneNumber;
+    public int zip;
+    public long phoneNumber;
     public String email;
 
-    public Contact(String firstName, String lastName, String address, String city, String state, int zip, long phoneNumber, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
-        this.city = city;
-        this.state = state;
-        this.zip = String.valueOf(zip);
-        this.phoneNumber = String.valueOf(phoneNumber);
-        this.email = email;
+    //public Contact(String firstName, String lastName, String address, String city, String state, int zip, long phoneNumber, String email) {
+
+    Contact(){
+        this.setFirstName(firstName);
+        this.setLastName(lastName);
+        this.setAddress(address);
+        this.setCity(city);
+        this.setState(state);
+        this.setZip(zip);
+        this.setPhoneNumber(phoneNumber);
+        this.setEmail(email);
 
     }
+
+
 
 
     public String getFirstName() {
@@ -63,20 +67,20 @@ public class Contact {
         this.state = state;
     }
 
-    public String getZip() {
+    public int getZip() {
         return zip;
     }
 
     public void setZip(int zip) {
-        this.zip = String.valueOf(zip);
+        this.zip = zip;
     }
 
-    public String getPhoneNumber() {
+    public long getPhoneNumber() {
         return phoneNumber;
     }
 
     public void setPhoneNumber(long phoneNumber) {
-        this.phoneNumber = String.valueOf(phoneNumber);
+        this.phoneNumber = phoneNumber;
     }
 
     public String getEmail() {
@@ -87,18 +91,16 @@ public class Contact {
         this.email = email;
     }
 
-    public Contact() {
 
-    }
 
-    public Contact(String firstName2, String lastName2, String address2, String city2, String state2, String zip2, String phoneNumber2, String email2) {
+    public Contact(String firstName2, String lastName2, String address2, String city2, String state2, int zip2, long phoneNumber2, String email2) {
         this.firstName = firstName2;
         this.lastName = lastName2;
         this.address = address2;
         this.city = city2;
         this.state = state2;
-        this.zip = String.valueOf(zip2);
-        this.phoneNumber = String.valueOf(phoneNumber2);
+        this.zip = zip2;
+        this.phoneNumber = phoneNumber2;
         this.email = email2;
 
     }
@@ -108,6 +110,7 @@ public class Contact {
                 + zip + ", phoneNumber=" + phoneNumber + ", email=" + email + "]";
 
     }
-
 }
+
+
 
