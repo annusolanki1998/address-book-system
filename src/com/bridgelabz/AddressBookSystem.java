@@ -14,7 +14,7 @@ public class AddressBookSystem {
         boolean condition = true;
 
         while (condition == true) {
-            System.out.println("1.add" + "\n" + "2.edit" + "\n" + "3.delete");
+            System.out.println("1.Add" + "\n" + "2.Edit" + "\n" + "3.Delete" + "\n" + "4.AddMultipleContacts");
             int option = scanner.nextInt();
 
             switch (option) {
@@ -26,6 +26,9 @@ public class AddressBookSystem {
                     break;
                 case 3:
                     addressbooksystem.deleteContactDetails();
+                    break;
+                case 4:
+                    addressbooksystem.addMultipleContact();
                     break;
                 default:
                     System.out.println("Invalid Input");
@@ -143,6 +146,15 @@ public class AddressBookSystem {
         }
         System.out.println(addressBook);
 
+    }
+
+    public void addMultipleContact() {
+        System.out.println("Enter Number of Contacts to Add into Contact Book");
+        int number = scanner.nextInt();
+        for (int i = 0; i < number; i++) {
+            addContactDetails();
+            System.out.println(i + 1 + " Contact added Successfully.. ");
+        }
     }
 
 }
