@@ -23,10 +23,6 @@ public class Contact {
         this.setEmail(email);
 
     }
-
-
-
-
     public String getFirstName() {
         return firstName;
     }
@@ -42,11 +38,9 @@ public class Contact {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
     public String getAddress() {
         return address;
     }
-
     public void setAddress(String address) {
         this.address = address;
     }
@@ -90,9 +84,6 @@ public class Contact {
     public void setEmail(String email) {
         this.email = email;
     }
-
-
-
     public Contact(String firstName2, String lastName2, String address2, String city2, String state2, int zip2, long phoneNumber2, String email2) {
         this.firstName = firstName2;
         this.lastName = lastName2;
@@ -104,7 +95,6 @@ public class Contact {
         this.email = email2;
 
     }
-
     public String toString() {
         return "Contact [firstName=" + firstName + ", lastName=" + lastName + ",  address=" + address + ", city=" + city + ", state=" + state + ", zip="
                 + zip + ", phoneNumber=" + phoneNumber + ", email=" + email + "]";
