@@ -2,6 +2,7 @@ package com.bridgelabz;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+
 public class AddressBookSystem {
     public static Scanner scanner = new Scanner(System.in);
     static ArrayList<Contact> addressBook = new ArrayList<Contact>();
@@ -12,8 +13,8 @@ public class AddressBookSystem {
         addressbooksystem.addContactDetails();
         boolean condition = true;
 
-        while(condition == true){
-            System.out.println("1.add" + "\n" + "2.edit");
+        while (condition == true) {
+            System.out.println("1.add" + "\n" + "2.edit" + "\n" + "3.delete");
             int option = scanner.nextInt();
 
             switch (option) {
@@ -22,6 +23,9 @@ public class AddressBookSystem {
                     break;
                 case 2:
                     addressbooksystem.editContactDetails();
+                    break;
+                case 3:
+                    addressbooksystem.deleteContactDetails();
                     break;
                 default:
                     System.out.println("Invalid Input");
@@ -77,15 +81,15 @@ public class AddressBookSystem {
 
     }
 
-    public  void editContactDetails(){
-        System.out.println("Enter a number for edit:");
+    public void editContactDetails() {
+        System.out.println("Enter a name for edit:");
         String editName = scanner.next();
-        for (int i =0; i <addressBook.size();i++){
-            if(addressBook.get(i).getFirstName().equals(editName)){
+        for (int i = 0; i < addressBook.size(); i++) {
+            if (addressBook.get(i).getFirstName().equals(editName)) {
                 System.out.println("Select options");
-                System.out.println("\n0.First Name\n1.Last Name\n2.Address\n3.City\n4.State\n5.Zip\n6.Phone Number\n7.Email");
+                System.out.println("\n1.First Name\n2.Last Name\n3.Address\n4.City\n5.State\n6.Zip\n7.Phone Number\n8.Email");
                 int editOption = scanner.nextInt();
-                switch (editOption){
+                switch (editOption) {
                     case 1:
                         System.out.println("Enter First name:");
                         addressBook.get(i).setFirstName(scanner.next());
@@ -115,7 +119,7 @@ public class AddressBookSystem {
                         addressBook.get(i).setPhoneNumber(Long.parseLong(scanner.next()));
                         break;
                     case 8:
-                        System.out.println("Enter first name:");
+                        System.out.println("Enter Email :");
                         addressBook.get(i).setEmail(scanner.next());
                         break;
                     default:
@@ -125,6 +129,20 @@ public class AddressBookSystem {
             System.out.println("Edited list is:");
             System.out.println(addressBook);
         }
+    }
+
+    public void deleteContactDetails() {
+        System.out.println("Confirm first name to delete contact");
+        String confirmName = scanner.next();
+        System.out.println(confirmName);
+        for (int i = 0; i < addressBook.size(); i++) {
+            if (addressBook.get(i).getFirstName().equals(confirmName)) ;
+            Contact person = addressBook.get(i);
+            addressBook.remove(person);
+
+        }
+        System.out.println(addressBook);
+
     }
 
 }
