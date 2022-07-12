@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7cf77afc-0ee7-4691-8041-436a96e96158" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/bridgelabz/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bridgelabz/AddressBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/bridgelabz/AddressBookSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bridgelabz/AddressBookSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/bridgelabz/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bridgelabz/Contact.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +39,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.AddressBook">
+  <component name="RunManager" selected="Application.AddressBookSystem">
     <configuration name="AddressBook" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bridgelabz.AddressBook" />
       <module name="address_book_system" />
@@ -68,8 +68,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AddressBook" />
         <item itemvalue="Application.AddressBookSystem" />
+        <item itemvalue="Application.AddressBook" />
       </list>
     </recent_temporary>
   </component>
